@@ -1,118 +1,142 @@
-大家好，欢迎回来鸿蒙5莓创图表组件的专场，我们这一期来讲解组合图组件中xAxis属性的详细用法。xAxis是控制X轴显示和样式的重要配置对象，掌握它的各项属性对于定制化图表至关重要。
+### Hello and welcome back to our special session on HarmonyOS 5 Meichuang chart components! In this episode, we'll explore the detailed usage of the `xAxis` property in combined chart components. The `xAxis` is a crucial configuration object for controlling the display and styling of the X-axis, and mastering its properties is essential for customizing charts.  
 
-## 1. type
 
-作用：指定X轴的类型 类型：String 默认值：'data' 可选值：'data'（数据轴）、'value'（数值轴） 场景：当需要将X轴作为分类轴使用时设为'data'，作为数值轴使用时设为'value' 代码示例：
-
-```
+## 1. `type`  
+**Function**: Specifies the type of the X-axis.  
+**Type**: String  
+**Default**: `'data'`  
+**Options**: `'data'` (category axis), `'value'` (value axis)  
+**Scenario**: Use `'data'` for categorical axes and `'value'` for numerical axes.  
+**Code Example**:  
+```json
 xAxis: {
-  type: 'data', // 设置为分类轴
-  data: ['一月', '二月', '三月']
+  type: 'data', // Set as category axis
+  data: ['January', 'February', 'March']
 }
-```
+```  
 
-## 2. name
 
-作用：设置X轴的名称 类型：String 默认值：''（空字符串） 场景：当需要为X轴添加说明性文字时使用 代码示例：
-
-```
+## 2. `name`  
+**Function**: Sets the name of the X-axis.  
+**Type**: String  
+**Default**: `''` (empty string)  
+**Scenario**: Add descriptive text to the X-axis.  
+**Code Example**:  
+```json
 xAxis: {
-  name: '月份', // 显示X轴名称
+  name: 'Month', // Display X-axis name
   nameGap: 15
 }
-```
+```  
 
-## 3. show
 
-作用：控制X轴是否显示 类型：Boolean 默认值：true 场景：需要隐藏X轴时设为false 代码示例：
-
-```
+## 3. `show`  
+**Function**: Controls whether the X-axis is displayed.  
+**Type**: Boolean  
+**Default**: `true`  
+**Scenario**: Hide the X-axis by setting to `false`.  
+**Code Example**:  
+```json
 xAxis: {
-  show: false // 隐藏X轴
+  show: false // Hide X-axis
 }
-```
+```  
 
-## 4. position
 
-作用：设置X轴的位置 类型：String 默认值：'bottom' 可选值：'bottom'（底部）、'top'（顶部） 场景：需要将X轴显示在图表顶部时使用 代码示例：
-
-```
+## 4. `position`  
+**Function**: Sets the position of the X-axis.  
+**Type**: String  
+**Default**: `'bottom'`  
+**Options**: `'bottom'` (bottom), `'top'` (top)  
+**Scenario**: Display the X-axis at the top of the chart.  
+**Code Example**:  
+```json
 xAxis: {
-  position: 'top' // X轴显示在顶部
+  position: 'top' // X-axis at the top
 }
-```
+```  
 
-## 5. nameGap
 
-作用：设置轴名称与轴线之间的距离 类型：Number 默认值：15 场景：调整轴名称与轴线的间距 代码示例：
-
-```
+## 5. `nameGap`  
+**Function**: Sets the distance between the axis name and the axis line.  
+**Type**: Number  
+**Default**: `15`  
+**Scenario**: Adjust the spacing between the axis name and the axis line.  
+**Code Example**:  
+```json
 xAxis: {
-  name: '月份',
-  nameGap: 20 // 增大名称与轴线的距离
+  name: 'Month',
+  nameGap: 20 // Increase distance between name and axis line
 }
-```
+```  
 
-## 6. nameLocation
 
-作用：设置轴名称的位置 类型：String 默认值：'end' 可选值：'start'（起始位置）、'center'（居中）、'end'（结束位置） 场景：控制轴名称在轴线上的对齐方式 代码示例：
-
-```
+## 6. `nameLocation`  
+**Function**: Sets the position of the axis name.  
+**Type**: String  
+**Default**: `'end'`  
+**Options**: `'start'` (start), `'center'` (center), `'end'` (end)  
+**Scenario**: Control the alignment of the axis name on the axis line.  
+**Code Example**:  
+```json
 xAxis: {
-  name: '月份',
-  nameLocation: 'center' // 名称居中显示
+  name: 'Month',
+  nameLocation: 'center' // Name centered
 }
-```
+```  
 
-## 7. nameTextStyle
 
-作用：设置轴名称的文本样式
+## 7. `nameTextStyle`  
+**Function**: Sets the text style of the axis name.  
 
-### 7.1 color
-
-作用：设置名称文本颜色 类型：String 默认值：'#999' 代码示例：
-
-```
+### 7.1 `color`  
+**Function**: Sets the text color of the name.  
+**Type**: String  
+**Default**: `'#999'`  
+**Code Example**:  
+```json
 nameTextStyle: {
-  color: '#333' // 深色文字
+  color: '#333' // Dark text
 }
-```
+```  
 
-### 7.2 fontSize
-
-作用：设置名称文本大小 类型：Number 默认值：22 代码示例：
-
-```
+### 7.2 `fontSize`  
+**Function**: Sets the text size of the name.  
+**Type**: Number  
+**Default**: `22`  
+**Code Example**:  
+```json
 nameTextStyle: {
-  fontSize: 18 // 较小字号
+  fontSize: 18 // Smaller font size
 }
-```
+```  
 
-### 7.3 fontWeight
-
-作用：设置名称文本粗细 类型：String 默认值：'normal' 代码示例：
-
-```
+### 7.3 `fontWeight`  
+**Function**: Sets the font weight of the name.  
+**Type**: String  
+**Default**: `'normal'`  
+**Code Example**:  
+```json
 nameTextStyle: {
-  fontWeight: 'bold' // 加粗显示
+  fontWeight: 'bold' // Bold text
 }
-```
+```  
 
-### 7.4 fontFamily
-
-作用：设置名称文本字体 类型：String 默认值：'sans-serif' 代码示例：
-
-```
+### 7.4 `fontFamily`  
+**Function**: Sets the font family of the name.  
+**Type**: String  
+**Default**: `'sans-serif'`  
+**Code Example**:  
+```json
 nameTextStyle: {
-  fontFamily: 'Microsoft YaHei' // 指定字体
+  fontFamily: 'Microsoft YaHei' // Specify font
 }
-```
+```  
 
-完整示例：
-
-```
+**Complete Example**:  
+```json
 xAxis: {
-  name: '月份',
+  name: 'Month',
   nameTextStyle: {
     color: '#1890FF',
     fontSize: 16,
@@ -120,134 +144,157 @@ xAxis: {
     fontFamily: 'Arial'
   }
 }
-```
+```  
 
-## 8. min
 
-作用：设置坐标轴最小值 类型：String|Number 默认值：null 场景：需要强制指定坐标轴范围时使用 代码示例：
-
-```
+## 8. `min`  
+**Function**: Sets the minimum value of the axis.  
+**Type**: String|Number  
+**Default**: `null`  
+**Scenario**: Force specify the axis range.  
+**Code Example**:  
+```json
 xAxis: {
   type: 'value',
-  min: 0 // 最小值从0开始
+  min: 0 // Minimum starts at 0
 }
-```
+```  
 
-## 9. max
 
-作用：设置坐标轴最大值 类型：String|Number 默认值：null 场景：需要强制指定坐标轴范围时使用 代码示例：
-
-```
+## 9. `max`  
+**Function**: Sets the maximum value of the axis.  
+**Type**: String|Number  
+**Default**: `null`  
+**Scenario**: Force specify the axis range.  
+**Code Example**:  
+```json
 xAxis: {
   type: 'value',
-  max: 100 // 最大值到100
+  max: 100 // Maximum up to 100
 }
-```
+```  
 
-## 10. interval
 
-作用：强制设置坐标轴分割间隔 类型：Number 默认值：null 场景：需要固定坐标轴刻度间隔时使用 代码示例：
-
-```
+## 10. `interval`  
+**Function**: Forces the axis division interval.  
+**Type**: Number  
+**Default**: `null`  
+**Scenario**: Fix the axis tick interval.  
+**Code Example**:  
+```json
 xAxis: {
   type: 'value',
-  interval: 20 // 每20个单位一个刻度
+  interval: 20 // One tick every 20 units
 }
-```
+```  
 
-## 11. minInterval
 
-作用：设置最小分割间隔 类型：Number 默认值：null 场景：防止自动计算的间隔过小时使用 代码示例：
-
-```
+## 11. `minInterval`  
+**Function**: Sets the minimum division interval.  
+**Type**: Number  
+**Default**: `null`  
+**Scenario**: Prevent automatically calculated intervals from being too small.  
+**Code Example**:  
+```json
 xAxis: {
   type: 'value',
-  minInterval: 1 // 最小间隔为1
+  minInterval: 1 // Minimum interval is 1
 }
-```
+```  
 
-## 12. maxInterval
 
-作用：设置最大分割间隔 类型：Number 默认值：null 场景：防止自动计算的间隔过大时使用 代码示例：
-
-```
+## 12. `maxInterval`  
+**Function**: Sets the maximum division interval.  
+**Type**: Number  
+**Default**: `null`  
+**Scenario**: Prevent automatically calculated intervals from being too large.  
+**Code Example**:  
+```json
 xAxis: {
   type: 'value',
-  maxInterval: 100 // 最大间隔为100
+  maxInterval: 100 // Maximum interval is 100
 }
-```
+```  
 
-## 13. boundaryGap
 
-作用：控制坐标轴两端是否留白 类型：Boolean 默认值：null 场景：需要图表紧贴坐标轴边缘时设为false 代码示例：
-
-```
+## 13. `boundaryGap`  
+**Function**: Controls whether to leave space at the axis ends.  
+**Type**: Boolean  
+**Default**: `null`  
+**Scenario**: Set to `false` to have the chart紧贴 (close to) the axis edges.  
+**Code Example**:  
+```json
 xAxis: {
-  boundaryGap: false // 不留白
+  boundaryGap: false // No space at ends
 }
-```
+```  
 
-## 14. splitNumber
 
-作用：设置坐标轴的分割段数 类型：Number 默认值：5 场景：控制坐标轴刻度数量 代码示例：
-
-```
+## 14. `splitNumber`  
+**Function**: Sets the number of axis divisions.  
+**Type**: Number  
+**Default**: `5`  
+**Scenario**: Control the number of axis ticks.  
+**Code Example**:  
+```json
 xAxis: {
-  splitNumber: 4 // 分为4段
+  splitNumber: 4 // Divided into 4 segments
 }
-```
+```  
 
-## 15. axisLine
 
-作用：设置坐标轴轴线样式
+## 15. `axisLine`  
+**Function**: Sets the style of the axis line.  
 
-### 15.1 show
-
-作用：是否显示轴线 类型：Boolean 默认值：true 代码示例：
-
-```
+### 15.1 `show`  
+**Function**: Whether to show the axis line.  
+**Type**: Boolean  
+**Default**: `true`  
+**Code Example**:  
+```json
 axisLine: {
-  show: false // 隐藏轴线
+  show: false // Hide axis line
 }
-```
+```  
 
-### 15.2 lineStyle
+### 15.2 `lineStyle`  
+**Function**: Sets the axis line style.  
 
-作用：设置轴线样式
-
-#### 15.2.1 color
-
-作用：设置轴线颜色 类型：String 默认值：'#DDE2EB' 代码示例：
-
-```
+#### 15.2.1 `color`  
+**Function**: Sets the axis line color.  
+**Type**: String  
+**Default**: `'#DDE2EB'`  
+**Code Example**:  
+```json
 lineStyle: {
-  color: '#1890FF' // 蓝色轴线
+  color: '#1890FF' // Blue axis line
 }
-```
+```  
 
-#### 15.2.2 width
-
-作用：设置轴线宽度 类型：Number 默认值：1 代码示例：
-
-```
+#### 15.2.2 `width`  
+**Function**: Sets the axis line width.  
+**Type**: Number  
+**Default**: `1`  
+**Code Example**:  
+```json
 lineStyle: {
-  width: 2 // 加粗轴线
+  width: 2 // Thickened axis line
 }
-```
+```  
 
-#### 15.2.3 lineDash
-
-作用：设置轴线虚线样式 类型：Array 默认值：null 代码示例：
-
-```
+#### 15.2.3 `lineDash`  
+**Function**: Sets the axis line dashed style.  
+**Type**: Array  
+**Default**: `null`  
+**Code Example**:  
+```json
 lineStyle: {
-  lineDash: [5, 5] // 虚线样式
+  lineDash: [5, 5] // Dashed style
 }
-```
+```  
 
-完整示例：
-
-```
+**Complete Example**:  
+```json
 xAxis: {
   axisLine: {
     show: true,
@@ -258,58 +305,61 @@ xAxis: {
     }
   }
 }
-```
+```  
 
-## 16. axisTick
 
-作用：设置坐标轴刻度样式
+## 16. `axisTick`  
+**Function**: Sets the style of the axis ticks.  
 
-### 16.1 show
-
-作用：是否显示刻度 类型：Boolean 默认值：true 代码示例：
-
-```
+### 16.1 `show`  
+**Function**: Whether to show the ticks.  
+**Type**: Boolean  
+**Default**: `true`  
+**Code Example**:  
+```json
 axisTick: {
-  show: false // 隐藏刻度
+  show: false // Hide ticks
 }
-```
+```  
 
-### 16.2 lineStyle
-
-作用：设置刻度线样式 类型：Object 默认值：{color: '#DDE2EB', width: 1, lineDash: null} 代码示例：
-
-```
+### 16.2 `lineStyle`  
+**Function**: Sets the tick line style.  
+**Type**: Object  
+**Default**: `{color: '#DDE2EB', width: 1, lineDash: null}`  
+**Code Example**:  
+```json
 axisTick: {
   lineStyle: {
     color: '#FF0000',
     width: 2
   }
 }
-```
+```  
 
-### 16.3 interval
-
-作用：设置刻度与标签的间隔 类型：Number 默认值：4 代码示例：
-
-```
+### 16.3 `interval`  
+**Function**: Sets the interval between ticks and labels.  
+**Type**: Number  
+**Default**: `4`  
+**Code Example**:  
+```json
 axisTick: {
-  interval: 8 // 增大间隔
+  interval: 8 // Increase interval
 }
-```
+```  
 
-### 16.4 length
-
-作用：设置刻度线长度 类型：Number 默认值：5 代码示例：
-
-```
+### 16.4 `length`  
+**Function**: Sets the tick line length.  
+**Type**: Number  
+**Default**: `5`  
+**Code Example**:  
+```json
 axisTick: {
-  length: 10 // 加长刻度线
+  length: 10 // Lengthen ticks
 }
-```
+```  
 
-完整示例：
-
-```
+**Complete Example**:  
+```json
 xAxis: {
   axisTick: {
     show: true,
@@ -321,171 +371,186 @@ xAxis: {
     length: 8
   }
 }
-```
+```  
 
-## 17. axisLabel
 
-作用：设置坐标轴标签样式
+## 17. `axisLabel`  
+**Function**: Sets the style of the axis labels.  
 
-### 17.1 show
-
-作用：是否显示标签 类型：Boolean 默认值：true 代码示例：
-
-```
+### 17.1 `show`  
+**Function**: Whether to show the labels.  
+**Type**: Boolean  
+**Default**: `true`  
+**Code Example**:  
+```json
 axisLabel: {
-  show: false // 隐藏标签
+  show: false // Hide labels
 }
-```
+```  
 
-### 17.2 formatter
-
-作用：标签内容格式化 类型：String|Function 默认值：null 代码示例：
-
-```
-// 字符串格式化
+### 17.2 `formatter`  
+**Function**: Formats the label content.  
+**Type**: String|Function  
+**Default**: `null`  
+**Code Example**:  
+```json
+// String formatting
 axisLabel: {
   formatter: '{value}月'
 }
 
-// 函数格式化
+// Function formatting
 axisLabel: {
   formatter: (value) => `${value}月份`
 }
-```
+```  
 
-### 17.3 color
-
-作用：设置标签文本颜色 类型：String 默认值：'#999999' 代码示例：
-
-```
+### 17.3 `color`  
+**Function**: Sets the label text color.  
+**Type**: String  
+**Default**: `'#999999'`  
+**Code Example**:  
+```json
 axisLabel: {
-  color: '#333' // 深色标签
+  color: '#333' // Dark labels
 }
-```
+```  
 
-### 17.4 fontSize
-
-作用：设置标签文本大小 类型：Number 默认值：22 代码示例：
-
-```
+### 17.4 `fontSize`  
+**Function**: Sets the label text size.  
+**Type**: Number  
+**Default**: `22`  
+**Code Example**:  
+```json
 axisLabel: {
-  fontSize: 16 // 较小字号
+  fontSize: 16 // Smaller font size
 }
-```
+```  
 
-### 17.5 fontWeight
-
-作用：设置标签文本粗细 类型：Number 默认值：400 代码示例：
-
-```
+### 17.5 `fontWeight`  
+**Function**: Sets the label text weight.  
+**Type**: Number  
+**Default**: `400`  
+**Code Example**:  
+```json
 axisLabel: {
-  fontWeight: 600 // 加粗
+  fontWeight: 600 // Bold
 }
-```
+```  
 
-### 17.6 fontFamily
-
-作用：设置标签文本字体 类型：String 默认值：'sans-serif' 代码示例：
-
-```
+### 17.6 `fontFamily`  
+**Function**: Sets the label text font.  
+**Type**: String  
+**Default**: `'sans-serif'`  
+**Code Example**:  
+```json
 axisLabel: {
   fontFamily: 'Microsoft YaHei'
 }
-```
+```  
 
-### 17.7 rotate
-
-作用：设置标签旋转角度 类型：Number 默认值：0 代码示例：
-
-```
+### 17.7 `rotate`  
+**Function**: Sets the label rotation angle.  
+**Type**: Number  
+**Default**: `0`  
+**Code Example**:  
+```json
 axisLabel: {
-  rotate: 45 // 45度倾斜
+  rotate: 45 // 45-degree tilt
 }
-```
+```  
 
-### 17.8 interval
-
-作用：设置标签显示间隔 类型：String|Number 默认值：null 代码示例：
-
-```
+### 17.8 `interval`  
+**Function**: Sets the label display interval.  
+**Type**: String|Number  
+**Default**: `null`  
+**Code Example**:  
+```json
 axisLabel: {
-  interval: 2 // 每隔2个显示一个标签
+  interval: 2 // Show one label every 2 items
 }
-```
+```  
 
-### 17.9 width
-
-作用：设置标签文本宽度 类型：Number|null 默认值：null 代码示例：
-
-```
+### 17.9 `width`  
+**Function**: Sets the label text width.  
+**Type**: Number|null  
+**Default**: `null`  
+**Code Example**:  
+```json
 axisLabel: {
-  width: 60 // 固定宽度
+  width: 60 // Fixed width
 }
-```
+```  
 
-### 17.10 overflow
-
-作用：设置文本超出处理方式 类型：String 默认值：'none' 可选值：'none'（无）、'truncate'（截断）、'breakAll'（换行） 代码示例：
-
-```
+### 17.10 `overflow`  
+**Function**: Sets the handling for text overflow.  
+**Type**: String  
+**Default**: `'none'`  
+**Options**: `'none'` (none), `'truncate'` (truncate), `'breakAll'` (wrap)  
+**Code Example**:  
+```json
 axisLabel: {
-  overflow: 'truncate' // 超出截断
+  overflow: 'truncate' // Truncate overflow
 }
-```
+```  
 
-### 17.11 margin
-
-作用：设置标签与刻度线的距离 类型：Number 默认值：5 代码示例：
-
-```
+### 17.11 `margin`  
+**Function**: Sets the distance between labels and tick lines.  
+**Type**: Number  
+**Default**: `5`  
+**Code Example**:  
+```json
 axisLabel: {
-  margin: 10 // 增大距离
+  margin: 10 // Increase distance
 }
-```
+```  
 
-### 17.12 shadowColor
-
-作用：设置文本阴影颜色 类型：String 默认值：'rgba(0, 0, 0, 0)' 代码示例：
-
-```
+### 17.12 `shadowColor`  
+**Function**: Sets the text shadow color.  
+**Type**: String  
+**Default**: `'rgba(0, 0, 0, 0)'`  
+**Code Example**:  
+```json
 axisLabel: {
   shadowColor: 'rgba(0, 0, 0, 0.5)'
 }
-```
+```  
 
-### 17.13 shadowBlur
-
-作用：设置阴影模糊大小 类型：Number 默认值：0 代码示例：
-
-```
+### 17.13 `shadowBlur`  
+**Function**: Sets the shadow blur size.  
+**Type**: Number  
+**Default**: `0`  
+**Code Example**:  
+```json
 axisLabel: {
   shadowBlur: 5
 }
-```
+```  
 
-### 17.14 shadowOffsetX
-
-作用：设置阴影X轴偏移 类型：Number 默认值：0 代码示例：
-
-```
+### 17.14 `shadowOffsetX`  
+**Function**: Sets the shadow X-axis offset.  
+**Type**: Number  
+**Default**: `0`  
+**Code Example**:  
+```json
 axisLabel: {
   shadowOffsetX: 2
 }
-```
+```  
 
-### 17.15 shadowOffsetY
-
-作用：设置阴影Y轴偏移 类型：Number 默认值：0 代码示例：
-
-```
+### 17.15 `shadowOffsetY`  
+**Function**: Sets the shadow Y-axis offset.  
+**Type**: Number  
+**Default**: `0`  
+**Code Example**:  
+```json
 axisLabel: {
   shadowOffsetY: 2
 }
-```
+```  
 
-完整示例：
-
-```
+**Complete Example**:  
+```json
 xAxis: {
   axisLabel: {
     show: true,
@@ -505,59 +570,61 @@ xAxis: {
     shadowOffsetY: 1
   }
 }
-```
+```  
 
-## 18. splitLine
 
-作用：设置坐标轴分割线样式
+## 18. `splitLine`  
+**Function**: Sets the style of the axis split lines.  
 
-### 18.1 show
-
-作用：是否显示分割线 类型：Boolean 默认值：false 代码示例：
-
-```
+### 18.1 `show`  
+**Function**: Whether to show split lines.  
+**Type**: Boolean  
+**Default**: `false`  
+**Code Example**:  
+```json
 splitLine: {
-  show: true // 显示分割线
+  show: true // Show split lines
 }
-```
+```  
 
-### 18.2 lineStyle
+### 18.2 `lineStyle`  
+**Function**: Sets the split line style.  
 
-作用：设置分割线样式
-
-#### 18.2.1 color
-
-作用：设置分割线颜色 类型：String 默认值：'#DDE2EB' 代码示例：
-
-```
+#### 18.2.1 `color`  
+**Function**: Sets the split line color.  
+**Type**: String  
+**Default**: `'#DDE2EB'`  
+**Code Example**:  
+```json
 lineStyle: {
-  color: '#EEE' // 浅灰色
+  color: '#EEE' // Light gray
 }
-```
+```  
 
-#### 18.2.2 width
-
-作用：设置分割线宽度 类型：Number 默认值：1 代码示例：
-
-```
+#### 18.2.2 `width`  
+**Function**: Sets the split line width.  
+**Type**: Number  
+**Default**: `1`  
+**Code Example**:  
+```json
 lineStyle: {
   width: 1
 }
-```
+```  
 
-#### 18.2.3 lineDash
-
-作用：设置分割线虚线样式 类型：Array 默认值：null 代码示例：
-
-```
+#### 18.2.3 `lineDash`  
+**Function**: Sets the split line dashed style.  
+**Type**: Array  
+**Default**: `null`  
+**Code Example**:  
+```json
 lineStyle: {
-  lineDash: [3, 3] // 虚线
+  lineDash: [3, 3] // Dashed
 }
-```
+```  
 
-完整示例：
-
-```
+**Complete Example**:  
+```json
 xAxis: {
   splitLine: {
     show: true,
@@ -568,100 +635,36 @@ xAxis: {
     }
   }
 }
-```
+```  
 
-## 19. data
 
-作用：设置X轴的数据项 类型：Array 默认值：[] 场景：当X轴为分类轴时使用 代码示例：
-
-```
+## 19. `data`  
+**Function**: Sets the data items of the X-axis.  
+**Type**: Array  
+**Default**: `[]`  
+**Scenario**: Use when the X-axis is a category axis.  
+**Code Example**:  
+```json
 xAxis: {
-  data: ['一月', '二月', '三月', '四月', '五月']
+  data: ['January', 'February', 'March', 'April', 'May']
 }
-```
+```  
 
-## 20. rLevel
 
-作用：设置X轴的渲染层级 类型：Number 默认值：-20 场景：需要调整X轴与其他元素的叠放顺序时使用 代码示例：
-
-```
+## 20. `rLevel`  
+**Function**: Sets the rendering level of the X-axis.  
+**Type**: Number  
+**Default**: `-20`  
+**Scenario**: Adjust the stacking order of the X-axis with other elements.  
+**Code Example**:  
+```json
 xAxis: {
-  rLevel: -10 // 提高层级
+  rLevel: -10 // Increase level
 }
-```
+```  
 
-## 21. animationCurve
 
-作用：设置X轴动画曲线 类型：String 默认值：'easeOutCubic' 场景：需要自定义X轴动画效果时使用 代码示例：
-
-```
-xAxis: {
-  animationCurve: 'linear' // 线性动画
-}
-```
-
-## 22. animationFrame
-
-作用：设置X轴动画帧数 类型：Number 默认值：30 场景：调整动画流畅度 代码示例：
-
-```
-xAxis: {
-  animationFrame: 50 // 更流畅的动画
-}
-```
-
-## 实际应用案例
-
-下面是一个完整的X轴配置示例，展示了如何综合运用这些属性：
-
-```
-xAxis: {
-  type: 'data',
-  name: '销售月份',
-  nameGap: 20,
-  nameLocation: 'center',
-  nameTextStyle: {
-    color: '#1890FF',
-    fontSize: 16,
-    fontWeight: 'bold'
-  },
-  axisLine: {
-    show: true,
-    lineStyle: {
-      color: '#666',
-      width: 2
-    }
-  },
-  axisTick: {
-    show: true,
-    length: 8,
-    lineStyle: {
-      color: '#333',
-      width: 1
-    }
-  },
-  axisLabel: {
-    show: true,
-    color: '#666',
-    fontSize: 12,
-    rotate: 30,
-    formatter: '{value}月',
-    margin: 10
-  },
-  splitLine: {
-    show: true,
-    lineStyle: {
-      color: '#EEE',
-      width: 1,
-      lineDash: [3, 3]
-    }
-  },
-  data: ['一月', '二月', '三月', '四月', '五月', '六月'],
-  animationCurve: 'easeOutCubic',
-  animationFrame: 40
-}
-```
-
-这个配置会生成一个带有蓝色标题、30度倾斜月份标签、虚线网格线以及自定义动画效果的X轴。
-
-好，这期讲到这里就结束了，希望大家通过这篇文章能够全面掌握莓创图表组件中xAxis的各项属性配置，在实际项目中灵活运用，创建出更美观、更符合需求的图表效果。如果有任何问题，欢迎在评论区留言讨论！
+## 21. `animationCurve`  
+**Function**: Sets the X-axis animation easing.  
+**Type**: String  
+**Default**:
